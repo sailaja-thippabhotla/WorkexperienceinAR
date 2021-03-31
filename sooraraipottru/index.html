@@ -1,0 +1,45 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Sooraraipottru</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" id="metaViewport" content="user-scalable=no, initial-scale=1, width=device-width, viewport-fit=cover" data-tdv-general-scale="0.5"/>
+    
+
+
+
+
+
+<!-- Send deviceorientation/devicemotion to the INNER iframe -->
+<script src="//cdn.8thwall.com/web/iframe/iframe.js"></script>
+
+<script>
+const IFRAME_ID = 'my-iframe' // Iframe containing AR content.
+const onLoad = () => {
+  window.XRIFrame.registerXRIFrame(IFRAME_ID)
+}
+// Add event listenters and callbacks for the body DOM.
+window.addEventListener('load', onLoad, false)
+
+</script>
+</html>
+<body>
+  <style type="text/css">
+    html, body {
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    }
+  </style>
+  <iframe
+    id="my-iframe"
+    style="border: 0; width: 100%; height: 90vh"
+    allow="camera;microphone;gyroscope;accelerometer;"
+    frameBorder="0"
+    src="https://avataar.8thwall.app/sooraraipottru">
+  </iframe>
+</body>
+
+</html>
